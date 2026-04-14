@@ -26,6 +26,30 @@ Register User
     [Tags]  register
     AutomationExApp.Register New User
 
+Login User With Correct Credentials
+    [Tags]  login
+    AutomationExApp.Login With Valid Credentials
+
+Login User With Incorrect Credentials
+    [Tags]  login_invalid
+    AutomationExApp.Login With Invalid Credentials
+
+Logout User
+    [Tags]  logout
+    AutomationExApp.Logout User
+
+Register User With Existing Email
+    [Tags]  register_existing
+    AutomationExApp.Register With Existing Email
+
+Contact Us Form
+    [Tags]  contact
+    AutomationExApp.Submit Contact Us Form
+
+Verify Subscription In Home Page
+    [Tags]  subscription
+    AutomationExApp.Verify Home Page Subscription
+
 
 
 

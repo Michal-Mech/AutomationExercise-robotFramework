@@ -57,8 +57,3 @@ Delete Account
     Click Element    ${DELETE_ACCOUNT_LINK}
     sleep    5s
 
-Verify Account Deleted
-    Wait Until Page Contains    Account Deleted!
-
-Click Continue After Deleted
-    Click Element    ${CONTINUE_BTN}

@@ -23,6 +23,9 @@ Submit Signup
     Click Element    ${SIGNUP_BUTTON}
     Wait Until Page Contains    Enter Account Information
 
+Click Signup Button
+    Click Element    ${SIGNUP_BUTTON}
+
 Enter Login Credentials
     [Arguments]    ${email}    ${password}
     Input Text    ${LOGIN_EMAIL_INPUT}    ${email}
