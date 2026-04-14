@@ -1,4 +1,4 @@
-# Python
+ignore# Python
 __pycache__/
 *.pyc
 
@@ -12,3 +12,8 @@ log.html
 report.html
 Results/
 results/
+
+# IDE / AI tools
+.claude
+.idea/
+.vscode/

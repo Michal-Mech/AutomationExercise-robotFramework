@@ -1,5 +1,6 @@
 *** Settings ***
 Documentation   This is some basic info about the whole suite
+Resource    ../Data/InputData.robot
 Resource    ../Resources/AutomationExApp.robot
 Resource    ../Resources/Common.robot
 Test Setup    Begin Web Test
@@ -9,9 +10,6 @@ Test Teardown    End Web Test
 # robot -d results tests/AutomationEx.robot
 
 *** Variables ***
-${BROWSER} =    edge
-${START_URL} =    https://automationexercise.com/
-${SEARCH_TERM} =    shirt
 
 *** Test Cases ***
 Logged out user should be able to search for products
@@ -23,6 +21,10 @@ Logged out user should be able to add and view product in cart
     AutomationExApp.Search for Products
     AutomationExApp.Select Product from Search Results
     AutomationExApp.View Product In Cart
+
+Register User
+    [Tags]  register
+    AutomationExApp.Register New User
 
 
 
