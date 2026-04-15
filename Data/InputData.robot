@@ -32,3 +32,6 @@ ${CONTACT_EMAIL} =      contact_test@test.com
 ${CONTACT_SUBJECT} =    Test Subject
 ${CONTACT_MESSAGE} =    This is a test message sent by automation.
 ${UPLOAD_FILE_PATH} =   ${CURDIR}${/}TestFiles${/}test_upload.txt
+
+# API Test Data
+${API_BASE_URL} =       https://automationexercise.com
