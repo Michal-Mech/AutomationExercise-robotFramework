@@ -35,3 +35,4 @@ ${UPLOAD_FILE_PATH} =   ${CURDIR}${/}TestFiles${/}test_upload.txt
 
 # API Test Data
 ${API_BASE_URL} =       https://automationexercise.com
+${SEARCH_PRODUCT} =     shirt

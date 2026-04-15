@@ -11,3 +11,27 @@ Get All Products List
     ${response}=    AutomationExAPI.Get All Products List
     Should Be Equal As Integers    ${response.json()['responseCode']}    200
     Should Not Be Empty    ${response.json()['products']}
+
+POST To All Products List
+    [Tags]    api    products    post
+    ${response}=    AutomationExAPI.Post To Products List
+    Should Be Equal As Integers    ${response.json()['responseCode']}    405
+    Should Be Equal As Strings     ${response.json()['message']}    This request method is not supported.
+
+Get All Brands List
+    [Tags]    api    brands    get
+    ${response}=    AutomationExAPI.Get All Brands List
+    Should Be Equal As Integers    ${response.json()['responseCode']}    200
+    Should Not Be Empty    ${response.json()['brands']}
+
+PUT To All Brands List
+    [Tags]    api    brands    put
+    ${response}=    AutomationExAPI.Put To Brands List
+    Should Be Equal As Integers    ${response.json()['responseCode']}    405
+    Should Be Equal As Strings     ${response.json()['message']}    This request method is not supported.
+
+Search Product
+    [Tags]    api    search    post
+    ${response}=    AutomationExAPI.Search For Product
+    Should Be Equal As Integers    ${response.json()['responseCode']}    200
+    Should Not Be Empty    ${response.json()['products']}
