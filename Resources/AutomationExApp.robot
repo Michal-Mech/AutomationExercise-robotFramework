@@ -42,6 +42,10 @@ View Product In Cart
     Cart.Go to Cart
 
 Create Test Account
+    ${name}    ${email}    ${password}=    Generate Test User Data
+    Set Suite Variable    ${USER_NAME}      ${name}
+    Set Suite Variable    ${USER_EMAIL}     ${email}
+    Set Suite Variable    ${USER_PASSWORD}  ${password}
     LandingPage.Load
     LandingPage.Verify Page Loaded
     CookieConsent.Accept Cookies If Present
