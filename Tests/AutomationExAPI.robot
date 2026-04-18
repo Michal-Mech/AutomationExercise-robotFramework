@@ -11,6 +11,8 @@ Get All Products List
     ${response}=    AutomationExAPI.Get All Products List
     Should Be Equal As Integers    ${response.json()['responseCode']}    200
     Should Not Be Empty    ${response.json()['products']}
+    Validate Response Has Keys    ${response.json()}    responseCode    products
+    Validate Products Schema      ${response.json()['products']}
 
 POST To All Products List
     [Tags]    api    products    post
@@ -23,6 +25,8 @@ Get All Brands List
     ${response}=    AutomationExAPI.Get All Brands List
     Should Be Equal As Integers    ${response.json()['responseCode']}    200
     Should Not Be Empty    ${response.json()['brands']}
+    Validate Response Has Keys    ${response.json()}    responseCode    brands
+    Validate Brands Schema        ${response.json()['brands']}
 
 PUT To All Brands List
     [Tags]    api    brands    put

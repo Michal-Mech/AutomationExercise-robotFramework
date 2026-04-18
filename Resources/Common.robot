@@ -1,5 +1,6 @@
 *** Settings ***
 Library         SeleniumLibrary
+Library         ../Libraries/CustomValidators.py
 
 *** Keywords ***
 Begin Web Test

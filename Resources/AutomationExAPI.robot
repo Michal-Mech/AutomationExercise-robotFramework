@@ -3,6 +3,7 @@ Resource    ../Data/InputData.robot
 Resource    ../Resources/API/ProductsAPI.robot
 Resource    ../Resources/API/BrandsAPI.robot
 Resource    ../Resources/API/SearchAPI.robot
+Library     ../Libraries/CustomValidators.py
 
 *** Keywords ***
 Begin API Test

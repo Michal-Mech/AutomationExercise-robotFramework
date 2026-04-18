@@ -11,8 +11,21 @@ Resource    ../Resources/PO/Header.robot
 Resource    ../Resources/PO/ContactUsPage.robot
 
 Library         SeleniumLibrary
+Library         ../Libraries/CustomValidators.py
 
 *** Keywords ***
+Generate Test User Data
+    [Documentation]    Generates a random name, email and password using the
+    ...                CustomValidators Python library and returns them as a
+    ...                3-element list: name, email, password.
+    ${name}=      Generate Random Name      prefix=TestUser
+    ${email}=     Generate Random Email     domain=test.com
+    ${password}=  Generate Random Password  length=10
+    Validate Email Format        ${email}
+    Validate Password Strength   ${password}
+    RETURN    ${name}    ${email}    ${password}
+
+
 Search for Products
     LandingPage.Load
     LandingPage.Verify Page Loaded
