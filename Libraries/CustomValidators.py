@@ -54,10 +54,6 @@ class CustomValidators:
         if errors:
             raise AssertionError(f"Password too weak — missing: {', '.join(errors)}")
 
-    # ------------------------------------------------------------------ #
-    # JSON response schema validation                                      #
-    # ------------------------------------------------------------------ #
-
     @keyword
     def validate_response_has_keys(self, response_json: dict, *expected_keys: str) -> None:
         """Validates that *response_json* contains all *expected_keys*.
@@ -108,10 +104,6 @@ class CustomValidators:
                     f"Brand at index {index} is missing field(s): {missing}. "
                     f"Brand data: {brand}"
                 )
-
-    # ------------------------------------------------------------------ #
-    # Test data generation                                                 #
-    # ------------------------------------------------------------------ #
 
     @keyword
     def generate_random_email(self, domain: str = "test.com") -> str:
